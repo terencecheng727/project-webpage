@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Documentation</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-gradient-custom {
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e2c3c356 100%);
+        }
+        .nav-active {
+            background-color: #ffcadcc4 !important; 
+            color: #1f2937 !important; 
+        }
+        .tab-active {
+            border-bottom: 2px solid #f63b3b;
+        }
+        #backtotop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #ff80aad0;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 antialiased min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm py-4 px-8 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-center items-center">
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" id="home-nav" class="nav-btn p-2 rounded-md hover:bg-gray-200 transition-colors duration-200">Home</a></li>
+                    <li><a href="documentation.html" id="docs-nav" class="nav-btn p-2 rounded-md hover:bg-gray-200 transition-colors duration-200 nav-active">Documentation</a></li>
+                    <li><a href="analysis.html" id="analysis-nav" class="nav-btn p-2 rounded-md hover:bg-gray-200 transition-colors duration-200">Analysis & Report</a></li>
+                    <li><a href="visualizations.html" id="viz-nav" class="nav-btn p-2 rounded-md hover:bg-gray-200 transition-colors duration-200">Visualizations</a></li>
+                    <li><a href="acknowledgements.html" id="acks-nav" class="nav-btn p-2 rounded-md hover:bg-gray-200 transition-colors duration-200">Acknowledgements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main class="flex-grow py-12 px-8 bg-gradient-custom">
+    <div class="container mx-auto max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-8">Documentation</h1>
+        <!-- tabs -->
+            <div class="flex border-b border-gray-300 mb-8">
+                <button class="py-2 px-4 text-gray-700 font-semibold tab-active" onclick="showTab('project-scope', event)">Purpose & Project Scope</button>
+                <button class="py-2 px-4 text-gray-700 font-semibold" onclick="showTab('research', event)">Research & Data</button>
+                <button class="py-2 px-4 text-gray-700 font-semibold" onclick="showTab('website', event)">Website Architecture</button>
+                <button class="py-2 px-4 text-gray-700 font-semibold" onclick="showTab('limitations', event)">Limitations & Future Work</button>
+            </div>
+
+            <!-- project scope tab -->
+            <div id="project-scope-tab" class="content-tab">
+                <div class="prose bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Purpose & Project Scope</h2>
+                        <p>My project, Shifts in Government Spending in Canada—An Analysis and Review of Canada's Healthcare Industry, 
+                        serves as a comprehensive analysis of Canadian federal government financial data. The primary purpose of this project is to go 
+                        beyond surface-level statistics and uncover a compelling narrative within the data by focusing on a specific sector.
+                        <br><br>
+                        The project's scope is defined by its two main components:
+                        <br><br>
+                        <ol>
+                            <li><i>&#9679; Macro-level Analysis:</i></li> This involves examining broad trends in federal government revenue, expenditure, and budgetary 
+                            balance over several decades from Statistics Canada. This foundational analysis helps to identify key spending priorities and 
+                            establish a long-term context for Canada's financial decisions.
+                            <br><br>
+                            <li><i>&#9679; Micro-level Analysis:</i></li>The project then narrows its focus to a single, critical area: the healthcare industry. By concentrating 
+                            on this sector, the analysis explores how a consistent increase in spending has been accompanied by persistent challenges, such as long 
+                            emergency room wait times and staffing issues. The goal is to illustrate that while financial investment is crucial, it doesn't always 
+                            directly solve systemic problems.
+                            <br><br>
+                            In essence, the project's purpose is to transform a vast dataset into a clear, compelling story that highlights how a nation's budget 
+                            reflects its evolving values and ongoing challenges. The project also acknowledges that while correlations can be observed, no statistical 
+                            significance has been calculated.
+                        </ol>
+                    </p>
+                </div>
+            </div>
+
+            <!-- research tab -->
+            <div id="research-tab" class="content-tab hidden">
+                <div class="prose bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Research & Data</h2>
+                        <p>The foundation of this project is a robust, multi-faceted research approach that combines a comprehensive dataset with a 
+                        targeted, deep dive into specific trends.
+                        <br><br>
+                        <u><b>Data Sources</b></u>
+                        <br><br>
+                        The core financial data for this analysis was sourced from the Revenue, expenditure and budgetary balance - General governments dataset, 
+                        which is publicly available from the Government of Canada's Open Data portal. This dataset provides a long-term view of federal 
+                        financial trends, from 1961 to 2024, enabling a historical perspective on government spending and revenue.
+                        <br><br>
+                        <ol>
+                            <li><i>&#9679; Primary Source:</i></li> This involves examining broad trends in federal government revenue, expenditure, and budgetary 
+                            balance over several decades from Statistics Canada. This foundational analysis helps to identify key spending priorities and 
+                            establish a long-term context for Canada's financial decisions.
+                            <br><br>
+                            <li><i>&#9679; URL:</i><a href="https://open.canada.ca/data/en/dataset/9d7364eb-e344-4908-b173-c151c1710b11" class="text-blue-600" target="_blank"> <u>https://open.canada.ca/data/en/dataset/9d7364eb-e344-4908-b173-c151c1710b11</a></u></li>
+                        </ol>
+                        <br>
+                        <u><b>Collaborative Research</b></u>
+                        <br><br>
+                        A significant portion of the analysis, particularly the deep dive into healthcare, was developed in collaboration with Glory Nwokeji. 
+                        Her research, titled "ER wait times and Factors that affect them in Canada: Comparative Study between Ontario, Quebec and Saskatchewan", 
+                        provided critical, on-the-ground context for the financial data. Her work highlights the tangible impacts of federal spending on the 
+                        healthcare system, focusing on issues like prolonged emergency room wait times and staffing shortages. This collaboration was essential 
+                        for connecting the macro-level financial trends to real-world outcomes.
+                        <br><br>
+                        <u><b>Key Findings</b></u>
+                        <br><br>
+                        The data analysis reveals several noteworthy findings about Canadian federal spending:
+                        <br><br>
+                        <ol>
+                            <li><i>&#9679; Consistent Priorities:</i></li> Since 1961, "Goods and Services" and "Defence" have consistently ranked among the top 10 annual 
+                            expenditures. This indicates these areas are enduring priorities for the federal government, regardless of the political party in power.
+                            <br><br>
+                            <li><i>&#9679; Employment Insurance:</i></li> "Employment Insurance benefits" did not appear in the top 10 expenditures in the early 1960s, a 
+                            period when the program was already established. This highlights the fact that while a program exists, its financial prominence can 
+                            fluctuate significantly based on economic and social factors.
+                            <br><br>
+                            <li><i>&#9679; Old Age Security:</i></li> "Old Age Security" has also been a recurring top-ten expenditure. Its consistent presence reflects 
+                            Canada's aging population and the long-term commitment to social welfare programs.
+                        </ol>
+                    </p>
+                </div>
+            </div>
+
+            <!-- website tab -->
+            <div id="website-tab" class="content-tab hidden">
+                <div class="prose bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Website Architecture</h2>
+                        <p>The project website is designed as a centralized hub to present the full scope of this project, from its foundational data to its 
+                        final analysis and report. The architecture is built for simplicity and directness, ensuring that the user experience is clean and 
+                        focused on the content.
+                        <br><br>
+                        <ol>
+                            <li><i>&#9679; HTML</i></li> Provides the core structure and content of all web pages, including the report, documentation, and acknowledgements.
+                            <br><br>
+                            <li><i>&#9679; CSS:</i></li> Styling is managed with Tailwind CSS, a utility-first framework that enables rapid and consistent design. 
+                            This approach allows for a modern, responsive layout without the need for extensive custom CSS.
+                            <br><br>
+                            <li><i>&#9679; JavaScript:</i></li> JavaScript: Manages all client-side interactivity, such as the navigation tabs and the display 
+                            of different report sections. The use of JavaScript enhances the user experience by allowing for dynamic content 
+                            loading without requiring full page reloads.
+                        </ol>
+                        <br>
+                        <u><b>Website Structure</b></u>
+                        <br><br>
+                        The website is organized into a clear, tabbed structure to guide users through the project's various components.
+                        <ol>
+                            <li><i>&#9679; Home:</i></li> Landing page.
+                            <br><br>
+                            <li><i>&#9679; Documentation:</i></li> This section details the project's purpose, scope, and technical design.
+                            <br><br>
+                            <li><i>&#9679; Report:</i></li> The core of the website, containing the full analysis broken down into chapters. This is where the 
+                            narrative of the data is presented, supported by the visualizations.
+                            <br><br>
+                            <li><i>&#9679; Visualizations:</i></li> A dedicated section for showcasing all the charts and graphs created for the project.
+                            <br><br>
+                            <li><i>&#9679; Acknowledgements:</i></li> A page to credit all individuals and sources who contributed to the project.
+                        </ol>
+                    </p>
+                </div>
+            </div>
+
+            <!-- limitations tab -->
+            <div id="limitations-tab" class="content-tab hidden">
+                <div class="prose bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Limitations & Future Work</h2>
+                        <p>
+                        <u><b>Project Limitations</b></u>
+                        <br><br>
+                        Every project, regardless of its scale, has limitations that shape its outcomes. In this project, the primary challenge was managing a 
+                        vast, macro-level dataset. While a broad analysis was the initial goal, the sheer size and complexity of the data made it difficult to 
+                        identify a clear narrative. This experience underscored the importance of scoping a project to a manageable size, a lesson that was 
+                        applied when the focus shifted to a more specific, story-driven analysis of healthcare spending.
+                        <br><br>
+                        A second significant limitation was the time investment in learning new software, specifically Power BI. While a powerful tool for data 
+                        visualization, the steep learning curve for a beginner proved to be a time-consuming obstacle. In retrospect, focusing on a more familiar 
+                        tool or a simpler project for the initial learning phase would have been a more efficient approach.
+                        <br><br>
+                        <u><b>Future Work</b></u>
+                        <br><br>
+                        <ol>
+                            <li><i>&#9679; Exploring Additional Correlational Data:</i></li> The current analysis of financial data could be strengthened by integrating 
+                            additional datasets. For instance, data on population demographics, major economic events, or a detailed timeline of key legislative 
+                            changes in Canadian history could provide more direct and provable correlations to the observed shifts in government spending.
+                            <br><br>
+                            <li><i>&#9679; Expanding the Analysis:</i></li> While the current analysis focuses on healthcare spending, future work could apply a 
+                            similar methodology to other sectors. Examining trends in defence spending, social security, or infrastructure over time would offer 
+                            a more comprehensive understanding of Canadian fiscal priorities.
+                            <br><br>
+                            <li><i>&#9679; Enhancing the Website:</i></li> The project's website can be improved to be more dynamic and interactive. Future iterations 
+                            could include a feature that allows users to select different expenditure categories and time periods, generating custom visualizations 
+                            in real time. This would transform the website from a static report into an interactive analytical tool.
+                        </ol>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- back to top -->
+<button id="back-to-top" class="bg-pink-400 p-4 rounded-lg shadow-lg fixed bottom-8 right-8 cursor-pointer z-50 hidden transition-opacity hover:opacity-80" aria-label="Go to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+  </svg>
+</button>
+
+<!-- footer -->
+<footer class="bg-gray-600 text-gray-200 py-8 px-8 mt-auto">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2025 Terence Cheng. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // handling tabs within analysis page and report chapters
+
+    // show the correct content tab and update active button style
+    function showTab(tabId, event) {
+        const tabs = document.querySelectorAll('.content-tab');
+        tabs.forEach(tab => tab.classList.add('hidden'));
+
+        const buttons = document.querySelectorAll('.flex.border-b button');
+        buttons.forEach(button => button.classList.remove('tab-active'));
+        
+        document.getElementById(tabId + '-tab').classList.remove('hidden');
+
+        if (event && event.target) {
+            event.target.classList.add('tab-active');
+        }
+
+        // makes first part show when project scope tab is selected
+        if (tabId === 'project-scope') {
+            const firstChapterBtn = document.querySelector('#project-scope-tab .chapter-btn');
+            showChapter('chapter1', { target: firstChapterBtn });
+        }
+    }
+
+    // show the correct chapter content
+    function showChapter(chapterId, event) {
+    const chapters = document.querySelectorAll('.chapter-content');
+    chapters.forEach(chapter => chapter.classList.add('hidden'));
+
+    document.getElementById(chapterId).classList.remove('hidden');
+
+    const chapterButtons = document.querySelectorAll('.chapter-btn');
+    chapterButtons.forEach(button => {
+        button.classList.remove('chapter-active');
+        button.classList.remove('text-gray-900'); 
+        button.classList.add('text-gray-700'); 
+    });
+
+    if (event && event.target) {
+        const clickedButton = event.target; 
+        clickedButton.classList.add('chapter-active');
+        clickedButton.classList.remove('text-gray-700'); 
+        clickedButton.classList.add('text-gray-900');
+    }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+    showTab('project-scope', { target: document.querySelector('.flex.border-b button') });
+    });
+</script>
+<script src="js/backtotop.js"></script>
+
+</body>
+</html>
